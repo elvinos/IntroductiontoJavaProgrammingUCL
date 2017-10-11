@@ -19,14 +19,14 @@ public class ExerciseFour {
         * Takes user input of list of real positive numbers separated by spaces
          */
         userFloatArrayScan = new Scanner(System.in);
-        System.out.println("Input array of positive real numbers (end with a 0 to show completion");
+        System.out.println("Input list of positive real numbers");
         String userInput = userFloatArrayScan.nextLine();
 
         /*
         * Splits user input into a String Array
          */
         String[] stringList = userInput.split(" ");
-        System.out.println(Arrays.toString(stringList));
+//        System.out.println(Arrays.toString(stringList));
 
         /*
         * Creates Vector Float Array
