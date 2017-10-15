@@ -15,7 +15,7 @@ public class ExerciseThree {
         System.out.println("Random Integer Array: " + aList.toString());
         System.out.println("Array Even Sum: " + evenSum(aList));
         ArrayList<Integer> oddList = oddReArr(aList);
-        System.out.println("Array Odd/Even Split " + oddList.toString());
+        System.out.println("Array Odd/Even Split: " + oddList.toString());
 
     }
 
@@ -41,7 +41,6 @@ public class ExerciseThree {
                 array.remove(i);
             }
         }
-//        array.remove(aListOdd);
         array.addAll(aListOdd);
         return array;
     }
