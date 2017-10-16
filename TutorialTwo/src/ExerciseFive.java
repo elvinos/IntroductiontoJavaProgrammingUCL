@@ -7,9 +7,11 @@ import java.util.Scanner;
 
 public class ExerciseFive {
 
-    public static void main(String[] args) {
+    private static Scanner numRowsScan;
+
+	public static void main(String[] args) {
         while (true) {
-            Scanner numRowsScan = new Scanner(System.in);
+            numRowsScan = new Scanner(System.in);
             System.out.println("How many rows?");
             int numRows = numRowsScan.nextInt();
 
@@ -21,7 +23,12 @@ public class ExerciseFive {
             }
         }
     }
-
+	
+	/**
+	 * Creates Pascal Triangle for number of rows
+	 * input: number of rows 
+	 * output: 2D array
+	 */
     public static int[][] pascalBuild(int numRows) {
         int[][] pascalBuilder = new int[numRows][numRows];
         pascalBuilder[0][0] = 1;
@@ -44,7 +51,12 @@ public class ExerciseFive {
         }
         return pascalBuilder;
     }
-
+    
+	/**
+	 * Prints formatted Pascal triangle
+	 * input: Pascal build, number of rows 
+	 */
+    
     public static void printNiceArray(int[][] pascalBuilder, int numRows) {
         String[][] prettyPascalBuilder = new String[numRows][numRows];
         String spacer;
@@ -89,18 +101,17 @@ public class ExerciseFive {
                         System.out.print(spacer);
                     }
                     System.out.print(prettyPascalBuilder[row][col] + spacer);
-//                    int digits = (int)(Math.log10(pascalBuilder[row][col]));
-//                    if (digits > 1){
-//                    for(int i = 0; i <= digits; i++) {
-//                        System.out.print("\b");
-//                    }
-//                    }
                 }
             }
             System.out.println();
         }
     }
 
+	/**
+	 * Prints 2D Array of rows
+	 * input: Pascal build 2d array
+	 *
+	 */
     public static void print(int[][] pascalBuilder) {
         for (int row = 0; row < pascalBuilder.length; row++) {
             for (int col = 0; col < pascalBuilder[row].length; col++) {

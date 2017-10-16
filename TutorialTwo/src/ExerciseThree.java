@@ -11,7 +11,6 @@ public class ExerciseThree {
         for (int i = 0; i < 100; ++i) {
             aList.add(randomGenerator.nextInt(100));
         }
-        int aListLength = aList.size();
         System.out.println("Random Integer Array: " + aList.toString());
         System.out.println("Array Even Sum: " + evenSum(aList));
         ArrayList<Integer> oddList = oddReArr(aList);
